@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace ="/fragments/general.html :: headerFiles"> </head>
+<link rel="stylesheet" type="text/css" href="/styles/main.css" />
+
+<body>
+<header th:insert="/fragments/general.html :: header"> </header>
+
+<h3> Club data input form</h3>
+<p> Please complete the club input data form:
+<form action="#" th:action="@{/clubDataInput}" th:object="${club}" method="post">
+<p> Club memberName: <input type="text" th:field="*{memberName}" /></p>
+<p> Club memberEmail: <input type="text" th:field="*{memberEmail}" /></p>
+<p>Club memberPhoneNumber: <input type="text" th:field="*{memberPhoneNumber}" /></p>
+
+<p><input type="submit" value="Submit" /> <br>
+
+<input type= "reset" value="Reset"/></p>
+</form>
+
+<p> <a href="/index" > Cancel</a>
+</p>
+<div th:replace ="/fragments/general.html:: footer"></div>
+ </body>
+ </html>

@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+ <head th:replace="/fragments/general.html :: headerFiles"> </head>
+ <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+ 
+ <body>
+<header th:insert ="/fragments/general.html:: header"></header>
+<p> The Java EE application is to get club data as a Club object, <br>
+add the Club object to the database, or <br>
+retrieve the list of club Members from the database and display as a table </p>
+
+<a href="/clubDataInput">Add a Club Member</a><br>
+<a href="/listOfMembers">List the club Members</a> <br>
+<a href="/phoneNumberBasedSearch">Search the club catalog based on phoneNumber</a> <br>
+
+
+<br>
+<div th:replace="/fragments/general.html :: footer"></div>
+ </body>
+ </html>

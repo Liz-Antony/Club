@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ <html xmlns:th="http://www.thymeleaf.org">
+ <head th:replace="/fragments/general.html :: headerFiles"> </head>
+ <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+ 
+ <body>
+<header th:insert="/fragments/general.html :: header"> </header>
+<h3> List of ClubMembers </h3>
+
+<table id="tableAlign">
+<tr>
+<th>MemberName</th>
+<th>memberEmail</th>
+<th>memberPhoneNumber</th>
+</tr>
+
+<tr th:each="aClub:${club}">
+<td th:text="${aClub.memberName}"></td>
+<td th:text="${aClub.memberEmail}"></td>
+<td th:text="${aClub.memberPhoneNumber}"></td>
+</tr>
+ </table>
+<p> Please check the club information and click to <br>
+<a href="/index">Confirm</a> </p>
+<div th:replace="/fragments/general.html :: footer"></div>
+ </body>
+ </html>
+
+ 
